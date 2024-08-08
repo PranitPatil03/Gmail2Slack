@@ -1,6 +1,5 @@
 import Profile from "./pages/Profile";
 import HomePage from "./pages/HomePage";
-import LoginPage from "./pages/LoginPage";
 import { UserProvider } from "./context/User";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Slack from "./pages/Slack";
@@ -13,7 +12,7 @@ function App() {
     },
     {
       path: "/login",
-      element: <LoginPage />,
+      element: <HomePage />,
     },
     {
       path: "/slack",
