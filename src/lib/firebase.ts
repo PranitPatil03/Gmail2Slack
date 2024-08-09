@@ -23,6 +23,8 @@ export const authWithGoogle = async () => {
     if (credential) {
       const accessToken = credential.accessToken;
       const user = result.user;
+      console.log("user", user);
+      console.log("accessToken", accessToken);
       return { user, accessToken };
     } else {
       throw new Error("No credential found");

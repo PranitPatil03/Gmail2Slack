@@ -20,12 +20,12 @@ const HomePage = () => {
     e.preventDefault();
 
     authWithGoogle()
-      .then(({ accessToken }) => {
+      .then(({user,accessToken }) => {
         if (!accessToken) {
           throw new Error("No access token found");
         }
 
-        const serverRoute = "/auth/google-auth";
+        const serverRoute = "/auth/google";
         const formData = { accessToken };
 
         userAuthFromServer(serverRoute, formData);
